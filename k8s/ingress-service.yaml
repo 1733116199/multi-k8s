@@ -14,7 +14,7 @@ spec:
         - www.multi-k8s.ningfengyang.com
       secretName: multi-k8s-ningfengyang-com
   rules:
-    - hosts: multi-k8s.ningfengyang.com
+    - host: multi-k8s.ningfengyang.com
       http:
         paths:
           - path: /?(.*)
@@ -25,7 +25,7 @@ spec:
             backend:
                 serviceName: server-cluster-ip-service
                 servicePort: 5000
-    - hosts: www.multi-k8s.ningfengyang.com
+    - host: www.multi-k8s.ningfengyang.com
       http:
         paths:
           - path: /?(.*)
